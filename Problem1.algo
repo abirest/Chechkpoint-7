@@ -1,0 +1,20 @@
+ALGORITHM Problem1
+VAR
+    set1: ARRAY_OF_INTEGER
+    set2: ARRAY_OF_INTEGER
+    i,j,sum:= INTEGER
+BEGIN
+    set1:{3,1,7,9}
+    set2: {2,4,1,9,3}
+FOR i FROM 0 TO set1.length-1 step 1 DO
+    IF (Not set1[i] IN set2) THEN
+        sum:=sum+set1[i]
+    END_IF
+END_FOR
+FOR j FROM 0 TO set2.length-1 step 1 DO
+    IF (NOT set2[j] IN set1) THEN
+        sum:=sum+set2[j]
+    END_IF
+END_FOR
+write ("the sum is"sum)
+END

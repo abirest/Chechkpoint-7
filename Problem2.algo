@@ -1,0 +1,18 @@
+ALGORITHM Dot_product
+VAR
+    vector1, vector2: ARRAY_OF_INTEGER
+    i,n: INTEGER
+BEGIN
+    VAR
+    PROCEDURE Result (vector1,vector2)
+    BEGIN
+        FOR i FROM 0 TO vector1.length-1 step 1 DO
+            Ps= vector1[i]*vector2[i]
+        END_FOR
+        IF(Ps=0) THEN
+        write ("orthogonal")
+        ELSE
+            write("Not orthogonal")
+        END_IF
+    END
+END
